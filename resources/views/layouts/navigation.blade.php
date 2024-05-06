@@ -13,7 +13,10 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        Reservas
+                    </x-nav-link>
+                    <x-nav-link :active="request()->routeIs('reservas.show')">
+                        Detalle de la reserva
                     </x-nav-link>
                 </div>
             </div>

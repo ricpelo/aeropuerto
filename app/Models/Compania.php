@@ -9,6 +9,8 @@ class Compania extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['nombre'];
+
     public function vuelos()
     {
         return $this->hasMany(Vuelo::class);
