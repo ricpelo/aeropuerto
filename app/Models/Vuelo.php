@@ -39,4 +39,14 @@ class Vuelo extends Model
     {
         return $this->hasMany(Reserva::class);
     }
+
+    public function cantidadPlazasLibres()
+    {
+        return $this->plazas - $this->reservas->count();
+    }
+
+    public function hayPlazasLibres()
+    {
+        return $this->plazas > $this->reservas->count();
+    }
 }
